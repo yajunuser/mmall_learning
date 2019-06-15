@@ -79,10 +79,8 @@ public class UserController {
     }
 
     /**
-     * 获得用户的登录信息
-     *
+     * @return 获得用户的登录信息
      * @param session
-     * @return
      */
     @RequestMapping(value = "get_user_info.do", method = RequestMethod.POST)
     @ResponseBody
@@ -104,11 +102,8 @@ public class UserController {
     }
 
     /**
-     * 回答完问题之后 会跳转到修改密码的接口 为了确认时这个用户一直在操作
-     * 所以要生成一个token 如果成功了就吧token值传给前端 为下一步的修改密码确认
-     *
-     * @param username
-     * @param question
+     * @param username 回答完问题之后 会跳转到修改密码的接口 为了确认时这个用户一直在操作
+     * @param question 所以要生成一个token 如果成功了就吧token值传给前端 为下一步的修改密码确认
      * @param answer
      * @return
      */
